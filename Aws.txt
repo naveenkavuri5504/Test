@@ -1,0 +1,39 @@
+Installing JDK:
+-------------------------
+    1)sudo yum install java-1.7.0-openjdk-devel
+	
+    sudo - gives admin access to install a software
+	
+    yum  - package manager - for installing packages/softwares on linux
+
+Installing Git on linux:
+----------------------------------
+    2)sudo yum install git
+
+Installing Maven on linux
+-------------------------------------------------------
+
+3)sudo wget http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
+
+4)sudo sed -i s/\$releasever/6/g /etc/yum.repos.d/epel-apache-maven.repo
+
+5)sudo yum install -y apache-maven
+
+6)mvn --version
+
+--------------------------------------------------------------------------------------------------
+Jenkins installation
+=======================================================
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+sudo yum install jenkins
+sudo service jenkins status
+sudo chkconfig jenkins on
+--------------------------------------------------------------------------------
+
+TOMCAT INSTALLATION 
+=========================================
+sudo yum install java-1.7.0-openjdk-devel
+wget http://mirror.fibergrid.in/apache/tomcat/tomcat-7/v7.0.78/bin/apache-tomcat-7.0.78.tar.gz
+tar -xzf apache-tomcat-7.0.78.tar.gz
+mv apache-tomcat-7.0.78 tomcat7
